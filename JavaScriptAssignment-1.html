@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Player Dice Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .player {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .dice img {
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .roll { background: #007bff; color: white; }
+        .save { background: #28a745; color: white; }
+        .reset { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Two Player Dice Game</h1>
+        <div>
+            <input type="text" id="player1Name" value="Player 1"> VS <input type="text" id="player2Name" value="Player 2">
+        </div>
+        <div class="player" id="player1">
+            <h2 id="p1Name">Player 1</h2>
+            <p>Saved Score: <span id="p1Saved">0</span></p>
+            <p>Current Score: <span id="p1Current">0</span></p>
+        </div>
+        <div class="player" id="player2">
+            <h2 id="p2Name">Player 2</h2>
+            <p>Saved Score: <span id="p2Saved">0</span></p>
+            <p>Current Score: <span id="p2Current">0</span></p>
+        </div>
+        <div class="dice">
+            <img id="diceImage" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png" alt="Dice">
+        </div>
+        <button class="roll" onclick="rollDice()">Roll Dice</button>
+        <button class="save" onclick="saveScore()">Save Score</button>
+        <button class="reset" onclick="resetGame()">Reset Game</button>
+        <h2 id="winner"></h2>
+    </div>
+
+    <script>
+        let currentPlayer = 1;
+        let scores = { 1: { saved: 0, current: 0 }, 2: { saved: 0, current: 0 } };
+
+        function rollDice() {
+            let diceValue = Math.floor(Math.random() * 6) + 1;
+            let diceImages = {
+                1: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png",
+                2: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Alea_2.png",
+                3: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Alea_3.png",
+                4: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Alea_4.png",
+                5: "https://upload.wikimedia.org/wikipedia/commons/5/55/Alea_5.png",
+                6: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Alea_6.png"
+            };
+            
+            document.getElementById("diceImage").src = diceImages[diceValue];
+
+            if (diceValue === 1) {
+                scores[currentPlayer].current = 0;
+                switchTurn();
+            } else {
+                scores[currentPlayer].current += diceValue;
+            }
+            updateUI();
+        }
+
+        function saveScore() {
+            scores[currentPlayer].saved += scores[currentPlayer].current;
+            scores[currentPlayer].current = 0;
+            if (scores[currentPlayer].saved >= 100) {
+                document.getElementById("winner").textContent = `${document.getElementById(`player${currentPlayer}Name`).value} Wins!`;
+                disableButtons();
+            } else {
+                switchTurn();
+            }
+            updateUI();
+        }
+
+        function switchTurn() {
+            currentPlayer = currentPlayer === 1 ? 2 : 1;
+        }
+
+        function updateUI() {
+            document.getElementById("p1Saved").textContent = scores[1].saved;
+            document.getElementById("p1Current").textContent = scores[1].current;
+            document.getElementById("p2Saved").textContent = scores[2].saved;
+            document.getElementById("p2Current").textContent = scores[2].current;
+            document.getElementById("p1Name").textContent = document.getElementById("player1Name").value;
+            document.getElementById("p2Name").textContent = document.getElementById("player2Name").value;
+        }
+
+        function resetGame() {
+            scores = { 1: { saved: 0, current: 0 }, 2: { saved: 0, current: 0 } };
+            currentPlayer = 1;
+            document.getElementById("diceImage").src = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png";
+            document.getElementById("winner").textContent = "";
+            enableButtons();
+            updateUI();
+        }
+
+        function disableButtons() {
+            document.querySelector(".roll").disabled = true;
+            document.querySelector(".save").disabled = true;
+        }
+
+        function enableButtons() {
+            document.querySelector(".roll").disabled = false;
+            document.querySelector(".save").disabled = false;
+        }
+    </script>
+</body>
+</html>
