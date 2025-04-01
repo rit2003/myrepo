@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff4fc;
+    margin: 0;
+    padding: 60px 0 30px 0;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    margin: 2px auto;
+    padding: 20px;
+    min-height: calc(100vh - 180px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.interview-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.interview-card h2 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.interview-card p {
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.interview-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.interview-card a:hover {
+    text-decoration: underline;
+}
+
+.no-interviews {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Large phones and small tablets */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 90px 0 20px 0;
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-left {
+        margin-bottom: 5px;
+    }
+
+    .logo {
+        height: 80px;
+        margin-right: 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+        margin: 2px;
+        font-size: 14px;
+    }
+
+    .logout-btn {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .interview-card {
+        padding: 15px;
+    }
+
+    .interview-card h2 {
+        font-size: 18px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav a {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+}
+
+/* Very small phones */
+@media screen and (max-width: 400px) {
+    body {
+        padding: 110px 0 20px 0;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .nav a {
+        margin: 2px 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .interview-card h2 {
+        font-size: 16px;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

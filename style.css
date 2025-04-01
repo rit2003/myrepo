@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 5px;
+}
+
+.logo {
+    height: 120px;
+    max-width: 100%;
+}
+
+.header h1 {
+    color: #344767;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-side {
+    background: white;
+    padding: 40px;
+}
+
+.form-box {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.tab-group {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #777;
+}
+
+.tab.active {
+    color: #e94e31;
+    border-bottom: 2px solid #e94e31;
+}
+
+h2 {
+    text-align: center;
+    color: #344767;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f9fafc;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #e94e31;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(233, 78, 49, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #e94e31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #d33d21;
+}
+
+.form-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-footer a {
+    color: #e94e31;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Popup Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.close-popup:hover {
+    color: #e94e31;
+}
+
+.popup-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: rgba(233, 78, 49, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #e94e31;
+}
+
+#popup-title {
+    color: #344767;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#popup-message {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.popup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #e94e31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup-btn:hover {
+    background: #d33d21;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 400px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 350px;
+    }
+
+    .form-side {
+        padding: 30px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        height: 90px;
+    }
+    
+    .popup-content {
+        padding: 25px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .form-side {
+        padding: 25px 20px;
+    }
+
+    .tab {
+        padding: 12px 5px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-footer {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
+    
+    .popup-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #popup-title {
+        font-size: 20px;
+    }
+    
+    #popup-message {
+        font-size: 14px;
+    }
+}
+
+/* Very small devices (smaller phones, less than 400px) */
+@media (max-width: 399.98px) {
+    body {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .form-side {
+        padding: 20px 15px;
+    }
+
+    .tab {
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}

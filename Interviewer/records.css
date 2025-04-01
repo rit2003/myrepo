@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff4fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.record-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.record-table th,
+.record-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.record-table th {
+    background-color: #f0f0f0;
+}
+
+.record-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.record-table a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.record-table a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button-container button:hover {
+    background-color: #4cae4c;
+}
+
+.no-records {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 80px auto 20px;
+        padding: 10px;
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav a {
+        margin: 2px 0;
+        padding: 8px 5px;
+        text-align: center;
+    }
+
+    .logout-btn {
+        margin: 10px auto;
+    }
+
+    .record-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .record-table th,
+    .record-table td {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Tablets and small desktops */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .logout-btn {
+        margin: 0px 10px;
+    }
+
+    .record-table th,
+    .record-table td {
+        padding: 6px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    .container {
+        margin-top: 130px;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+}

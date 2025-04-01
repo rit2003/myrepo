@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HR - Evaluation Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="record.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="schedule.html">Schedule Interview</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="record.html">Evaluation Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+</header>
+<body>
+  
+  <div class="container">
+    <h1>Evaluation Records</h1>
+    <table class="record-table">
+      <thead>
+        <tr>
+          <th>Interviewee Name</th>
+          <th>Interview Date</th>
+          <th>Interviewer</th>
+          <th>L1 Decision</th>
+          <th>L2 Scheduled</th>
+          <th>Final Decision</th>
+          <th>View PDF</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="recordTableBody"></tbody>
+    </table>
+    <div id="noRecordsMessage" class="no-records" style="display: none">
+      No records found.
+    </div>
+    <div class="button-container">
+      <button onclick="loadRecords()">Load Records</button>
+    </div>
+  </div>
+
+  <!-- Add this modal HTML -->
+  <div id="customModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="modalIcon"></span>
+        <h2 id="modalTitle"></h2>
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p id="modalMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="modalOkButton" class="modal-button">OK</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="record.js"></script>
+  <script src="../logout.js"></script>
+</body>
+
+</html>
