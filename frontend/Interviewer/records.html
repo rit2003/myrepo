@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interviewer - Evaluation Records</title>
+  <link rel="stylesheet" href="interviewer.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="records.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="calendar.html">Calendar</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="evaluation.html">My Evaluations</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <h1>Evaluation Records</h1>
+
+    <table class="record-table">
+      <thead>
+        <tr>
+          <th>Interviewee Name</th>
+          <th>Interview Date</th>
+          <th>Interviewer</th>
+          <th>L1 Decision</th>
+          <th>L2 Scheduled</th>
+          <th>Final Decision</th>
+          <th>View PDF</th>
+        </tr>
+      </thead>
+      <tbody id="recordTableBody">
+        <!-- Records will be dynamically populated here -->
+      </tbody>
+    </table>
+
+    <div id="noRecordsMessage" class="no-records" style="display: none">
+      No records found.
+    </div>
+
+    <div class="button-container">
+      <button onclick="loadRecords()">Load Records</button>
+    </div>
+  </div>
+  <script src="records.js"></script>
+  <script src="../logout.js"></script>
+</body>
+
+</html>

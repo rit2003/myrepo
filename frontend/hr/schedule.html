@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HR - Schedule Interview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="schedule.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="schedule.html">Schedule Interview</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="record.html">Evaluation Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+  </div>
+</header>
+
+<body>
+  
+  <div class="container">
+    <h1>Schedule Interview</h1>
+
+    <label for="intervieweeName">Interviewee Name:</label>
+    <input type="text" id="intervieweeName" name="intervieweeName" required />
+
+    <label for="intervieweeEmail">Interviewee Email:</label>
+    <input type="email" id="intervieweeEmail" name="intervieweeEmail" required />
+
+    <label for="intervieweeResume">Interviewee Resume (URL):</label>
+    <input type="text" id="intervieweeResume" name="intervieweeResume" placeholder="Enter URL" required />
+
+    <label for="interviewRound">Interview Round:</label>
+    <select id="level" name="level" required>
+      <option value="">Select Interview Round</option>
+      <option value="level1">L1</option>
+      <option value="level2">L2</option>
+    </select>
+
+    <label for="interviewer">Interviewer:</label>
+    <select id="interviewer" name="interviewer" required>
+      <option value="">Select Interviewer</option>
+    </select>
+
+    <label for="interviewDateTime">Interview Date & Time:</label>
+    <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" required />
+
+    <button id="scheduleBtn">Schedule Interview</button>
+  </div>
+
+  <!-- Custom Popup -->
+  <div id="custom-popup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <div class="popup-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h3 id="popup-title">Success!</h3>
+      <p id="popup-message">Operation completed successfully.</p>
+      <button id="popup-button" class="popup-btn">Continue</button>
+    </div>
+  </div>
+
+  <script src="schedule.js"></script>
+</body>
+
+</html>
