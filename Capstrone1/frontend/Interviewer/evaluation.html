@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interviewer - Evaluation Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="evaluation.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="calendar.html">Calendar</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="evaluation.html">My Evaluations</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <h1>Candidate Evaluation Form</h1>
+
+    <div id="candidate-info">
+      <!-- Candidate information will be displayed here -->
+    </div>
+
+    <form id="evaluation-form">
+      <div class="evaluation-section" id="skill-evaluation">
+        <h2>Skill Evaluation</h2>
+        <button type="button" id="add-skill-button" onclick="addSkill()">
+          Add Skill
+        </button>
+      </div>
+
+      <div class="evaluation-section">
+        <h2>Overall Assessment</h2>
+        <label for="final-decision">Final Decision:</label>
+        <select id="final-decision" name="final-decision">
+          <option value="L1 Passed">L1 Passed</option>
+          <option value="L1 Passed with Comment">
+            L1 Passed with Comment
+          </option>
+          <option value="L2 Passed">L2 Passed</option>
+          <option value="L2 Passed with Comment">
+            L2 Passed with Comment
+          </option>
+        </select>
+      </div>
+
+      <button type="button" onclick="submitEvaluation()">
+        Submit Evaluation
+      </button>
+    </form>
+  </div>
+
+  <script src="evaluation.js"></script>
+</body>
+
+</html>

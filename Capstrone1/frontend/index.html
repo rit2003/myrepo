@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logoimage.png" alt="NucleusTeq Logo" class="logo">
+        </div>
+        <h1>Interview Feedback Management System</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-side">
+            <div class="tab-group">
+                <div class="tab active" data-form="login">Login</div>
+                <div class="tab" data-form="signup">Sign Up</div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="form-box active" id="login">
+                <h2>Access Your Account</h2>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="form-footer">
+                        <span>Don't have an account? </span>
+                        <a class="toggle-form" data-form="signup">Register here</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-box" id="signup">
+                <h2>Create an Account</h2>
+                <form id="signup-form">
+                    <div class="input-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-role">Role</label>
+                        <select id="signup-role" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="hr">HR</option>
+                            <option value="interviewer">Interviewer </option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit">Register</button>
+                    <div class="form-footer">
+                        <span>Already have an account? </span>
+                        <a class="toggle-form" data-form="login">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

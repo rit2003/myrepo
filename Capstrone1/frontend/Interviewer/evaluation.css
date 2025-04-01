@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff4fc;
+    margin: 0;
+    padding-top: 60px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 60px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 320px);
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    height: 34px;
+}
+
+#evaluation-form {
+    margin-top: 20px;
+}
+
+.evaluation-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.evaluation-section h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 0;
+}
+
+.evaluation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.evaluation-row label {
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.evaluation-row select,
+.evaluation-row input[type="text"] {
+    width: 60%;
+}
+
+.evaluation-row button {
+    width: 10%;
+    padding: 5px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.evaluation-row button:hover {
+    background-color: #c9302c;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#add-skill-button {
+    background-color: #5bc0de;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#add-skill-button:hover {
+    background-color: #46b8da;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .logout-btn {
+        margin: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .logout-btn {
+        margin: 5px 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        margin: 5px;
+        padding: 8px 15px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 90px auto 40px;
+        padding: 15px;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .evaluation-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .evaluation-row label,
+    .evaluation-row select,
+    .evaluation-row input[type="text"] {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .evaluation-row button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    body {
+        padding-top: 150px;
+    }
+
+    .header {
+        padding: 5px;
+    }
+
+    .nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .evaluation-section {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav a {
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    body {
+        padding-top: 200px;
+    }
+
+    .container {
+        margin-top: 120px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    button,
+    #add-skill-button {
+        width: 100%;
+    }
+}

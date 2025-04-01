@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interviewer - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="calendar.html">Calendar</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="evaluation.html">My Evaluations</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <h1>Upcoming Interviews</h1>
+
+    <div id="interviewList">
+      <!-- Interview details will be dynamically added here -->
+    </div>
+    <div id="noInterviewsMessage" class="no-interviews" style="display: none">
+      No interviews scheduled.
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>

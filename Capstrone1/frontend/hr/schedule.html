@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HR - Schedule Interview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="schedule.css">
+  <link rel="stylesheet" type="text/css" href="../header.css">
+</head>
+<header>
+  <div class="header">
+    <div class="header-left">
+      <img src="/images/logoimage.png" alt="Company Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <div class="nav">
+        <a href="schedule.html">Schedule Interview</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="record.html">Evaluation Records</a>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+</header>
+<body>
+  
+  <div class="container">
+    <h1>Schedule Interview</h1>
+
+    <label for="intervieweeName">Interviewee Name:</label>
+    <input type="text" id="intervieweeName" name="intervieweeName" required />
+
+    <label for="intervieweeEmail">Interviewee Email:</label>
+    <input type="email" id="intervieweeEmail" name="intervieweeEmail" required />
+
+    <label for="intervieweeResume">Interviewee Resume (URL):</label>
+    <input type="text" id="intervieweeResume" name="intervieweeResume" placeholder="Enter URL" required />
+
+    <label for="interviewRound">Interview Round:</label>
+    <select id="level" name="level" required>
+      <option value="">Select Interview Round</option>
+      <option value="level1">L1</option>
+      <option value="level2">L2</option>
+    </select>
+
+    <label for="interviewer">Interviewer:</label>
+    <select id="interviewer" name="interviewer" required>
+      <option value="">Select Interviewer</option>
+    </select>
+
+    <label for="interviewDateTime">Interview Date & Time:</label>
+    <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" required />
+
+    <button id="scheduleBtn">Schedule Interview</button>
+
+    <script src="schedule.js"></script>
+</body>
+
+</html>
