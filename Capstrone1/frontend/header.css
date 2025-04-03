@@ -2,14 +2,12 @@
     background-color: white;
     color: #344767;
     height: 50px;
-    position: relative;
-    padding: 10px 20px;
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,4 +61,107 @@
 
 .logout-btn:hover {
     background-color: #777;
+}
+
+/* Media Queries */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .logo {
+        height: 100px;
+    }
+    
+    .logout-btn {
+        margin: 0px 20px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .logo {
+        height: 80px;
+    }
+    
+    .nav a {
+        padding: 8px 15px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .header {
+        padding: 10px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-left {
+        margin-bottom: 10px;
+    }
+    
+    .logo {
+        height: 70px;
+        margin-right: 10px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+    }
+    
+    .nav a {
+        padding: 6px 12px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    
+    .logout-btn {
+        margin: 10px 0;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .header {
+        padding: 8px 5px;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .nav a {
+        padding: 5px 8px;
+        margin: 2px;
+        font-size: 12px;
+    }
+    
+    .logout-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 380px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav a {
+        margin: 3px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header {
+        height: auto;
+        min-height: 60px;
+    }
 }

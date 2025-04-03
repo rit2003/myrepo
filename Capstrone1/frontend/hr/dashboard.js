@@ -38,7 +38,3 @@ async function loadScheduledInterviews() {
 // Load scheduled interviews on page load
 document.addEventListener('DOMContentLoaded', loadScheduledInterviews);
 
-function logout() {
-    localStorage.clear();
-    window.location.href = "../index.html";
-}

@@ -64,8 +64,3 @@ async function loadInterviews() {
 }
 
 loadInterviews();
-
-function logout() {
-    localStorage.clear();
-    window.location.href = "../index.html";
-}

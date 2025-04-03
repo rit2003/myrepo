@@ -35,7 +35,7 @@
     <form id="evaluation-form">
       <div class="evaluation-section" id="skill-evaluation">
         <h2>Skill Evaluation</h2>
-        <button type="button" id="add-skill-button" onclick="addSkill()">
+        <button type="button" id="add-skill-button" onclick="openAddSkillModal()">
           Add Skill
         </button>
       </div>
@@ -61,7 +61,58 @@
     </form>
   </div>
 
+  <!-- Add Skill Modal -->
+  <div id="add-skill-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Add New Skill</h3>
+        <button class="close-button" onclick="closeAddSkillModal()">×</button>
+      </div>
+      <div class="modal-content">
+        <label for="skill-name">Skill Name:</label>
+        <input id="skill-name" type="text" placeholder="Enter skill name">
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeAddSkillModal()" class="cancel-button">Cancel</button>
+        <button onclick="confirmAddSkill()" class="add-button">Add Skill</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal success-modal">
+      <div class="modal-header">
+        <h3>Success</h3>
+        <button class="close-button" onclick="closeSuccessModal()">×</button>
+      </div>
+      <div class="modal-content">
+        <p>Evaluation submitted successfully!</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeSuccessModal()" class="ok-button">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Validation Error Modal -->
+  <div id="validation-modal" class="modal-overlay">
+    <div class="modal error-modal">
+      <div class="modal-header">
+        <h3>Required Fields</h3>
+        <button class="close-button" onclick="closeValidationModal()">×</button>
+      </div>
+      <div class="modal-content">
+        <p>Please fill in all required fields.</p>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeValidationModal()" class="ok-button">OK</button>
+      </div>
+    </div>
+  </div>
+
   <script src="evaluation.js"></script>
+  <script src="../logout.js"></script>
 </body>
 
 </html>

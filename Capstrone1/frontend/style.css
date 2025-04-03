@@ -155,6 +155,103 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Custom Popup Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.close-popup:hover {
+    color: #e94e31;
+}
+
+.popup-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-color: rgba(233, 78, 49, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #e94e31;
+}
+
+#popup-title {
+    color: #344767;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#popup-message {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.popup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #e94e31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup-btn:hover {
+    background: #d33d21;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 /* Media Queries */
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
@@ -190,6 +287,10 @@ button:hover {
 
     .logo {
         height: 90px;
+    }
+    
+    .popup-content {
+        padding: 25px;
     }
 }
 
@@ -243,6 +344,23 @@ button:hover {
     .form-footer {
         margin-top: 20px;
         font-size: 12px;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
+    
+    .popup-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #popup-title {
+        font-size: 20px;
+    }
+    
+    #popup-message {
+        font-size: 14px;
     }
 }
 

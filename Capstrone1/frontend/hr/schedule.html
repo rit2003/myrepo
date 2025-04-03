@@ -21,7 +21,9 @@
       </div>
     </div>
     <button class="logout-btn" onclick="logout()"><a href="../index.html">Logout</a></button>
+  </div>
 </header>
+
 <body>
   
   <div class="container">
@@ -52,8 +54,25 @@
     <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" required />
 
     <button id="scheduleBtn">Schedule Interview</button>
+  </div>
 
-    <script src="schedule.js"></script>
+  <!-- Custom Popup -->
+  <div id="custom-popup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-popup">&times;</span>
+      <div class="popup-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h3 id="popup-title">Success!</h3>
+      <p id="popup-message">Operation completed successfully.</p>
+      <button id="popup-button" class="popup-btn">Continue</button>
+    </div>
+  </div>
+
+  <script src="schedule.js"></script>
 </body>
 
 </html>

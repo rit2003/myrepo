@@ -91,26 +91,6 @@ body {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    .header-left,
-    .header-center,
-    .logout-btn {
-        margin: 5px 0;
-    }
-
-    .logo {
-        height: 60px;
-        margin-right: 5px;
-    }
-
-    .nav {
-        margin-top: 5px;
-    }
 
     .container {
         margin-top: 120px;
@@ -149,31 +129,6 @@ body {
         width: 100%;
         margin-top: 140px;
         border-radius: 0;
-    }
-
-    .header {
-        padding: 5px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav a {
-        margin: 2px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .logout-btn {
-        margin: 5px 0;
-        width: 100%;
-        padding: 5px;
     }
 
     .calendar-navigation {

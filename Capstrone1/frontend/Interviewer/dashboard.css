@@ -62,37 +62,9 @@ h1 {
         padding: 90px 0 20px 0;
     }
 
-    .header {
-        height: auto;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .header-left {
-        margin-bottom: 5px;
-    }
-
-    .logo {
-        height: 80px;
-        margin-right: 0;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        margin-top: 5px;
-    }
-
-    .nav a {
-        padding: 8px 12px;
-        margin: 2px;
-        font-size: 14px;
-    }
-
-    .logout-btn {
-        margin: 10px 0;
-    }
 
     h1 {
+        margin: 150px;
         font-size: 24px;
     }
 }
@@ -113,13 +85,8 @@ h1 {
         font-size: 18px;
     }
 
-    .logo {
-        height: 60px;
-    }
-
-    .nav a {
-        padding: 6px 8px;
-        font-size: 13px;
+    h1 {
+        margin: 150px;
     }
 }
 
@@ -129,18 +96,8 @@ h1 {
         padding: 110px 0 20px 0;
     }
 
-    .nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-    }
-
-    .nav a {
-        margin: 2px 0;
-        text-align: center;
-    }
-
     h1 {
+        margin: 150px;
         font-size: 20px;
     }
 

@@ -49,66 +49,45 @@ h1 {
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
     .container {
-        width: 90%;
+        width: 150%;
     }
 
-    .logo {
-        height: 100px;
+    /* Make table scrollable horizontally */
+    .scheduled-interviews {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    body {
+        padding-top: 120px;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .container {
-        width: 95%;
+        width: 150%;
         margin: 80px auto 30px;
     }
 
-    .logo {
-        height: 80px;
+    /* Make table scrollable horizontally */
+    .scheduled-interviews {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
-    .nav a {
-        padding: 8px 15px;
-        margin: 0 3px;
-        font-size: 14px;
-    }
-
-    .logout-btn {
-        margin: 0px 20px;
+    body {
+        padding-top: 120px;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    .header-left {
-        margin-bottom: 10px;
-    }
-
-    .logo {
-        height: 60px;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-    }
-
-    .nav a {
-        margin: 5px;
-    }
-
-    .logout-btn {
-        margin: 10px 0;
-    }
 
     .container {
-        margin-top: 150px;
+        margin-top: 150%;
         padding: 15px;
     }
 
@@ -127,28 +106,13 @@ h1 {
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .container {
-        width: 100%;
+        width: 200%;
         margin-top: 170px;
         border-radius: 0;
     }
 
     h1 {
         font-size: 24px;
-    }
-
-    .logo {
-        height: 50px;
-    }
-
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav a {
-        width: 100%;
-        text-align: center;
-        margin: 3px 0;
     }
 
     body {

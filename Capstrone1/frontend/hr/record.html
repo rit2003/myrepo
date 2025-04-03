@@ -48,8 +48,26 @@
       <button onclick="loadRecords()">Load Records</button>
     </div>
   </div>
+
+  <!-- modal -->
+  <div id="customModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="modalIcon"></span>
+        <h2 id="modalTitle"></h2>
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p id="modalMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="modalOkButton" class="modal-button">OK</button>
+      </div>
+    </div>
+  </div>
+  
   <script src="record.js"></script>
- 
+  <script src="../logout.js"></script>
 </body>
 
 </html>
