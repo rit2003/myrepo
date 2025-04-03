@@ -85,8 +85,9 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     })
 
     if (!response.ok) {
-      const errorText = await response.text()
-      throw new Error(errorText || "Login failed. Please check your credentials.")
+      // Display consistent error message for wrong credentials
+      showPopup("Login Failed", "Please fill right credentials!")
+      return
     }
 
     const responseData = await response.json() // Parse JSON response
@@ -107,7 +108,8 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     })
   } catch (error) {
     console.error("Login failed:", error)
-    showPopup("Login Failed", error.message)
+    // Display consistent error message for any login failure
+    showPopup("Login Failed", "Invalid username or password. Please try again.")
   }
 })
 
@@ -120,14 +122,14 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
   const role = document.getElementById("signup-role").value
   const password = document.getElementById("signup-password").value
 
-  //email checking 
+  //email checking
   const validateEmailDomain = (email) => {
     const allowedDomain = "@nucleusteq.com"
     return email.endsWith(allowedDomain) && email.length > allowedDomain.length
   }
 
   if (!validateEmailDomain(email)) {
-    showPopup("Invalid Email", "Only @nucleausteq.com email addresses are allowed")
+    showPopup("Invalid Email", "Only @nucleusteq.com email addresses are allowed")
     return
   }
 
@@ -139,6 +141,12 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestData),
     })
+
+    if (!response.ok) {
+      // Handle signup errors with a clear message
+      showPopup("Registration Failed", "Please check your information and try again.")
+      return
+    }
 
     const responseData = await response.json() // Parse JSON response
 
@@ -161,4 +169,3 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
     showPopup("Registration Failed", "An error occurred while signing up. Please try again later.")
   }
 })
-

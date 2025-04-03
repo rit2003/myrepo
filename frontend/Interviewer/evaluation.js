@@ -178,7 +178,7 @@
       intervieweeEmail: candidateEmail,
       interviewTime: interviewTime,
       l1Decision: finalDecision,
-      l2Scheduled: ["L1 Passed", "L1 Passed with Comment"].includes(finalDecision) ? "No" : "Yes",
+      l2Scheduled: ["L1 Passed"].includes(finalDecision) ? "No" : "Yes",
       finalDecision: "pending",
       parameters: skillEvaluations,
     }
@@ -195,7 +195,7 @@
       .then((response) => response.json())
       .then((data) => {
         console.log("Response:", data)
-        openSuccessModal() // Show success modal instead of alert
+        openSuccessModal() 
   
         if (id) {
           fetch(`http://localhost:8080/api/schedules/updateEvaluation/${id}`, {
@@ -224,5 +224,3 @@
       }
     })
   })
-  
-  

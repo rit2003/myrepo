@@ -1,3 +1,17 @@
+
+ // Update the logout function to be more secure
+  function logout() {
+    // Clear all storage
+    localStorage.clear()
+    sessionStorage.clear()
+  
+    // Set a flag to indicate logout happened
+    sessionStorage.setItem("loggedOut", "true")
+  
+    // Redirect to login page with cache-busting parameter
+    window.location.replace("../index.html?logout=" + new Date().getTime())
+  }
+
 // Add this function at the top of your JS file to check login status
 function checkLoginStatus() {
     const isLoggedIn = localStorage.getItem("email")
@@ -14,9 +28,10 @@ function checkLoginStatus() {
     if (!checkLoginStatus()) return
   
     // Load page content only if logged in
+
     loadCandidateInfo()
     populateSkillEvaluation()
-  
+    
     // Prevent back button after logout
     window.history.pushState(null, null, window.location.href)
     window.addEventListener("popstate", () => {
@@ -24,16 +39,5 @@ function checkLoginStatus() {
     })
   }
   
-  // Update the logout function to be more secure
-  function logout() {
-    // Clear all storage
-    localStorage.clear()
-    sessionStorage.clear()
-  
-    // Set a flag to indicate logout happened
-    sessionStorage.setItem("loggedOut", "true")
-  
-    // Redirect to login page with cache-busting parameter
-    window.location.replace("../index.html?logout=" + new Date().getTime())
-  }
+
   
