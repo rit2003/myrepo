@@ -161,15 +161,18 @@ async function loadRecords() {
     }
 
     document.getElementById("noRecordsMessage").style.display = "none"
-
+    
     records.forEach((record) => {
+      // Determine L2 scheduling based on L1 decision
+      const needsL2 = record.l1Decision !== "L1 Passed"
+      const l2ScheduledText = needsL2 ? "Yes" : "No"
       const row = document.createElement("tr")
       row.innerHTML = `
             <td data-label="Interviewee Name">${record.intervieweeName}</td>
             <td data-label="Interview Date">${record.interviewTime}</td>
             <td data-label="Interviewer">${record.interviewerEmail}</td>
             <td data-label="L1 Decision">${record.l1Decision}</td>
-            <td data-label="L2 Scheduled">${record.l2Scheduled ? "Yes" : "No"}</td>
+            <td data-label="L2 Scheduled">${l2ScheduledText}</td>
             <td data-label="Final Decision">
                 <select onchange="updateFinalDecision('${record.id}', this.value)">
                     <option value="Pending" ${record.finalDecision === "Pending" ? "selected" : ""}>Pending</option>

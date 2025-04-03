@@ -80,11 +80,10 @@ async function updateFinalDecision(id, newDecision) {
       const records = await response.json()
       const tableBody = document.getElementById("recordTableBody")
       tableBody.innerHTML = ""
-      console.log(records)
-  
+      
       records.forEach((record) => {
         // Determine L2 scheduling based on L1 decision
-        const needsL2 = record.l1Decision !== "PASSED"
+        const needsL2 = record.l1Decision !== "L1 Passed"
         const l2ScheduledText = needsL2 ? "Yes" : "No"
   
         const row = document.createElement("tr")
