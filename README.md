@@ -52,53 +52,53 @@ frontend/ ├── css/ │ └── styles.css ├── js/ │ └── ma
 - PostgreSQL
 - Git
 
-### Backend Setup
-# Clone the repo
+# Backend Setup
+### Clone the repo
 git clone https://github.com/rit2003/myrepo.git
 
-# Navigate to backend
+### Navigate to backend
 cd backend/interviewer-scheduler
 
-# Configure PostgreSQL DB in application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/ifms
-spring.datasource.username=postgres
-spring.datasource.password=1234
+### Configure PostgreSQL DB in application.properties
+- spring.datasource.url=jdbc:postgresql://localhost:5432/ifms
+- spring.datasource.username=postgres
+- spring.datasource.password=1234
 
-# Run the app
+### Run the app
 ./mvnw spring-boot:run
-🌐 Frontend Setup
+
+# 🌐 Frontend Setup
 You can run the frontend locally without any build tools. Just open the HTML files directly in your browser:
 
-# Navigate to the frontend folder
+### Navigate to the frontend folder
 cd frontend
 
-# Open index.html or login.html using your browser
-open index.html    # Mac
-start index.html   # Windows
-xdg-open index.html # Linux
-💡 Or use a Live Server (like the VS Code extension) for a smoother dev experience.
+### Open index.html or login.html using your browser
+- open index.html    # Mac
+- start index.html   # Windows
+- xdg-open index.html # Linux
+- 💡 Or use a Live Server (like the VS Code extension) for a smoother dev experience.
 
 -----------------------
 
 📬 API Overview
-All APIs are available in the included Postman Collection file: IFMS_Postman_Collection.json
 
 🔐 Authentication
-POST /api/auth/login
-POST /api/auth/register
+- POST /api/auth/login
+- POST /api/auth/register
 
 📅 Schedule Management
-POST /api/schedule/add
-GET /api/schedule/getAll
-GET /api/schedule/getByEmail/{email}
+- POST /api/schedule/add
+- GET /api/schedule/getAll
+- GET /api/schedule/getByEmail/{email}
 
 📝 Evaluation Management
-POST /api/evaluation/save
-GET /api/evaluation/getByEmail/{email}
-POST /api/evaluation/exportPdf/{intervieweeEmail}
+- POST /api/evaluation/save
+- GET /api/evaluation/getByEmail/{email}
+- POST /api/evaluation/exportPdf/{intervieweeEmail}
 
 📧 Email Service
-POST /api/email/send
+- POST /api/email/send
 
 -----------------------------
 
