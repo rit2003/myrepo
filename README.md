@@ -78,30 +78,29 @@ start index.html   # Windows
 xdg-open index.html # Linux
 💡 Or use a Live Server (like the VS Code extension) for a smoother dev experience.
 
+-----------------------
+
 📬 API Overview
 All APIs are available in the included Postman Collection file: IFMS_Postman_Collection.json
 
 🔐 Authentication
 POST /api/auth/login
-
 POST /api/auth/register
 
 📅 Schedule Management
 POST /api/schedule/add
-
 GET /api/schedule/getAll
-
 GET /api/schedule/getByEmail/{email}
 
 📝 Evaluation Management
 POST /api/evaluation/save
-
 GET /api/evaluation/getByEmail/{email}
-
 POST /api/evaluation/exportPdf/{intervieweeEmail}
 
 📧 Email Service
 POST /api/email/send
+
+-----------------------------
 
 🧩 Features
 ✅ User Authentication (HR & Interviewers)
