@@ -1,0 +1,229 @@
+{
+  "info": {
+    "name": "Interview Feedback Management System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"secure123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/login",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"secure123\",\n  \"role\": \"HR\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/register",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Schedule Management",
+      "item": [
+        {
+          "name": "Add Interview Schedule",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"typeOfInterview\": \"Technical\",\n  \"intervieweeEmail\": \"candidate@mail.com\",\n  \"intervieweeName\": \"Candidate One\",\n  \"email\": \"interviewer@mail.com\",\n  \"resumeLink\": \"http://example.com/resume.pdf\",\n  \"interviewDate\": \"2025-04-15T10:00:00\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/schedule/add",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "schedule",
+                "add"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Schedules",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/schedule/getAll",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "schedule",
+                "getAll"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Schedules by Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/schedule/getByEmail/{email}",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "schedule",
+                "getByEmail",
+                "{{email}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evaluation Management",
+      "item": [
+        {
+          "name": "Save Evaluation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"interviewerEmail\": \"interviewer@example.com\",\n  \"intervieweeName\": \"Candidate A\",\n  \"intervieweeEmail\": \"candidateA@mail.com\",\n  \"interviewTime\": \"2025-04-15T10:00:00\",\n  \"l1Decision\": \"Selected\",\n  \"l2Scheduled\": \"Yes\",\n  \"finalDecision\": \"Pending\",\n  \"parameters\": [\n    {\n      \"skill\": \"SQL\",\n      \"rating\": \"Good\",\n      \"topicsUsed\": \"Joins, Aggregations\",\n      \"comments\": \"Solid understanding.\"\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/evaluation/save",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "evaluation",
+                "save"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Evaluation by Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/evaluation/getByEmail/{email}",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "evaluation",
+                "getByEmail",
+                "{{email}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Export Evaluation PDF",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/evaluation/exportPdf/{intervieweeEmail}",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "evaluation",
+                "exportPdf",
+                "{{intervieweeEmail}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Email Service",
+      "item": [
+        {
+          "name": "Send Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"to\": \"hr@example.com\",\n  \"subject\": \"Interview Schedule\",\n  \"message\": \"Interview details inside.\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/email/send",
+              "host": [
+                "http://localhost:8080/api"
+              ],
+              "path": [
+                "email",
+                "send"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
