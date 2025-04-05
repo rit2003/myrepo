@@ -128,11 +128,6 @@ async function initializeCalendar() {
     updateMonthYearDisplay();
 }
 
-window.onload = async function () {
-    await initializeCalendar();
-};
-
-
 function logout() {
     // Clear all storage
     localStorage.clear()
@@ -155,13 +150,12 @@ function logout() {
     }
     return true
   }
-  // Update the window.onload function to check login status first
+ 
   window.onload = () => {
     // Check if user is logged in before loading page content
     if (!checkLoginStatus()) return
   
     // Load page content only if logged in
-
     initializeCalendar()
     
     // Prevent back button after logout
