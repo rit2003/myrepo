@@ -131,10 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("scheduleBtn").addEventListener("click", scheduleInterview)
 })
 
-// Call populateInterviewers when the page loads
-window.onload = populateInterviewers
-
-
 // Update the logout function to be more secure
 function logout() {
   // Clear all storage
