@@ -154,7 +154,7 @@ function checkLoginStatus() {
   }
   return true
 }
-// Update the window.onload function to check login status first
+
 window.onload = () => {
   // Check if user is logged in before loading page content
   if (!checkLoginStatus()) return
