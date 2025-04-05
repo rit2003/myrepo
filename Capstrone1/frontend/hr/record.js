@@ -47,13 +47,6 @@ window.addEventListener("click", (event) => {
   }
 })
 
-// Close modal with Escape key
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && modal.style.display === "block") {
-    closeModal()
-  }
-})
-
 async function deleteRecord(id) {
   try {
     const response = await fetch(`http://localhost:8080/api/evaluations/${id}`, { method: "DELETE" })
