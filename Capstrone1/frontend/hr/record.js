@@ -7,7 +7,7 @@ const closeButton = document.querySelector(".close-button")
 const modalOkButton = document.getElementById("modalOkButton")
 
 // Show modal function
-function showModal(title, message, type = "info") {
+function showModal(title, message, type = "info", confirmCallback = null) {
   modalTitle.textContent = title
   modalMessage.textContent = message
 
@@ -21,8 +21,27 @@ function showModal(title, message, type = "info") {
     modalIcon.innerHTML = "✅"
   } else if (type === "error") {
     modalIcon.innerHTML = "❌"
+  } else if (type === "warning") {
+    modalIcon.innerHTML = "⚠️"
   } else {
     modalIcon.innerHTML = "ℹ️"
+  }
+
+  // Set up the OK button behavior
+  if (confirmCallback) {
+    // Store the original click handler
+    const originalClickHandler = modalOkButton.onclick
+    
+    // Set new click handler for confirmation
+    modalOkButton.onclick = () => {
+      confirmCallback()
+      closeModal()
+      // Restore original click handler
+      modalOkButton.onclick = originalClickHandler
+    }
+  } else {
+    // Reset to default behavior
+    modalOkButton.onclick = closeModal
   }
 
   // Show the modal
@@ -40,14 +59,24 @@ function closeModal() {
 
 // Event listeners for closing the modal
 closeButton.addEventListener("click", closeModal)
-modalOkButton.addEventListener("click", closeModal)
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     closeModal()
   }
 })
 
-async function deleteRecord(id) {
+// DeleteRecord function to show confirmation first
+function deleteRecord(id) {
+  showModal(
+    "Confirm Deletion", 
+    "Are you sure you want to delete this record? This action cannot be undone.", 
+    "warning",
+    () => performDeleteRecord(id)
+  )
+}
+
+// Function to actually perform the deletion after confirmation
+async function performDeleteRecord(id) {
   try {
     const response = await fetch(`http://localhost:8080/api/evaluations/${id}`, { method: "DELETE" })
     if (response.ok) {
