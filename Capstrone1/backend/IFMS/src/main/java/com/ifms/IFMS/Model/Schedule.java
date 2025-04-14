@@ -24,6 +24,7 @@ public class Schedule {
     @Column(nullable = false)
     private String email;
 
+    @Column(nullable = false)
     private String resumeLink;
 
     @Column(nullable = false)
