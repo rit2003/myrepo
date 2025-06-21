@@ -1,0 +1,312 @@
+2025-06-11 15:01:00,878 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/forgot-password from 127.0.0.1
+2025-06-11 15:01:00,957 - auth.routes - INFO - Password reset requested for email: user@example.com
+2025-06-11 15:01:05,420 - auth.routes - INFO - Password reset token generated for email: user@example.com
+2025-06-11 15:01:05,433 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/forgot-password - 4.5578s
+2025-06-11 15:01:24,896 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/forgot-password from 127.0.0.1
+2025-06-11 15:01:24,905 - auth.routes - INFO - Password reset requested for email: ritikachandak2003@gmail.com
+2025-06-11 15:01:24,918 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/forgot-password - 0.0226s
+2025-06-11 15:05:24,113 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/reset-password from 127.0.0.1
+2025-06-11 15:05:24,148 - auth.routes - INFO - Password reset attempt with token: Mc3Mklbe1B...
+2025-06-11 15:05:24,287 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\ritika\ecommerce-backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 15:05:25,459 - auth.routes - INFO - Password reset successful for user ID: 2
+2025-06-11 15:05:25,463 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/reset-password - 1.3499s
+2025-06-11 15:08:51,711 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 15:08:51,754 - auth.routes - INFO - Signin attempt for email: admin@example.com
+2025-06-11 15:08:52,796 - auth.routes - INFO - Signin successful for email: admin@example.com
+2025-06-11 15:08:52,811 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/signin - 1.1005s
+2025-06-11 15:09:09,925 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products from 127.0.0.1
+2025-06-11 15:09:09,981 - products.routes - INFO - Admin admin@example.com creating product: Test Product
+2025-06-11 15:09:10,066 - products.routes - INFO - Product created with ID: 7
+2025-06-11 15:09:10,081 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/admin/products - 0.1557s
+2025-06-11 15:11:11,470 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:11:11,496 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/admin/products/1 - 0.0264s
+2025-06-11 15:11:25,540 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:11:25,543 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/admin/products/1 - 0.0031s
+2025-06-11 15:11:42,518 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products/{1} from 127.0.0.1
+2025-06-11 15:11:42,518 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/admin/products/{1} - 0.0000s
+2025-06-11 15:12:08,051 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/{1} from 127.0.0.1
+2025-06-11 15:12:08,090 - middlewares.logging_middleware - INFO - Response: 422 for GET http://localhost:8000/admin/products/{1} - 0.0351s
+2025-06-11 15:12:23,598 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:12:23,606 - products.routes - INFO - Admin admin@example.com fetching product 1
+2025-06-11 15:12:23,626 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/admin/products/1 - 0.0288s
+2025-06-11 15:16:20,691 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products/2 from 127.0.0.1
+2025-06-11 15:16:20,695 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/admin/products/2 - 0.0040s
+2025-06-11 15:16:42,858 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/admin/products/2 from 127.0.0.1
+2025-06-11 15:16:42,861 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/admin/products/2 - 0.0035s
+2025-06-11 15:17:15,595 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:17:15,617 - products.routes - INFO - Admin admin@example.com fetching product 1
+2025-06-11 15:17:15,623 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/admin/products/1 - 0.0277s
+2025-06-11 15:17:41,411 - middlewares.logging_middleware - INFO - Request: PUT http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:17:41,428 - products.routes - INFO - Admin admin@example.com updating product 1
+2025-06-11 15:17:41,479 - products.routes - INFO - Product 1 updated successfully
+2025-06-11 15:17:41,483 - middlewares.logging_middleware - INFO - Response: 200 for PUT http://localhost:8000/admin/products/1 - 0.0714s
+2025-06-11 15:20:58,594 - middlewares.logging_middleware - INFO - Request: DELETE http://localhost:8000/admin/products/7 from 127.0.0.1
+2025-06-11 15:20:58,620 - products.routes - INFO - Admin admin@example.com deleting product 7
+2025-06-11 15:20:58,643 - products.routes - INFO - Product 7 deleted successfully
+2025-06-11 15:20:58,643 - middlewares.logging_middleware - INFO - Response: 200 for DELETE http://localhost:8000/admin/products/7 - 0.0493s
+2025-06-11 15:22:39,857 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products?category=Electronics&min_price=100&max_price=1000&sort_by=price&page=1&page_size=5 from 127.0.0.1
+2025-06-11 15:22:39,924 - products.routes - INFO - Fetching products with filters - category: Electronics, price: 100.0-1000.0
+2025-06-11 15:22:39,999 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products?category=Electronics&min_price=100&max_price=1000&sort_by=price&page=1&page_size=5 - 0.1422s
+2025-06-11 15:22:52,929 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products?category=Electronics from 127.0.0.1
+2025-06-11 15:22:52,934 - products.routes - INFO - Fetching products with filters - category: Electronics, price: None-None
+2025-06-11 15:22:52,949 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products?category=Electronics - 0.0196s
+2025-06-11 15:23:19,876 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products/search?keyword=iPhone from 127.0.0.1
+2025-06-11 15:23:19,888 - products.routes - INFO - Searching products with keyword: iPhone
+2025-06-11 15:23:19,905 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products/search?keyword=iPhone - 0.0302s
+2025-06-11 15:23:46,734 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products?category=Electronics from 127.0.0.1
+2025-06-11 15:23:46,745 - products.routes - INFO - Fetching products with filters - category: Electronics, price: None-None
+2025-06-11 15:23:46,745 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products?category=Electronics - 0.0102s
+2025-06-11 15:24:01,777 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products/search?keyword=MacBook from 127.0.0.1
+2025-06-11 15:24:01,779 - products.routes - INFO - Searching products with keyword: MacBook
+2025-06-11 15:24:01,785 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products/search?keyword=MacBook - 0.0083s
+2025-06-11 15:24:12,799 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products/2 from 127.0.0.1
+2025-06-11 15:24:12,799 - products.routes - INFO - Fetching product details for ID: 2
+2025-06-11 15:24:12,808 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products/2 - 0.0084s
+2025-06-11 15:25:34,954 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:25:34,959 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/cart - 0.0048s
+2025-06-11 15:25:34,964 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:25:34,980 - middlewares.logging_middleware - INFO - Response: 401 for POST http://localhost:8000/cart/ - 0.0154s
+2025-06-11 15:25:52,480 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:25:52,513 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/cart - 0.0328s
+2025-06-11 15:25:52,521 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:25:52,538 - cart.routes - INFO - User admin@example.com adding product 1 to cart
+2025-06-11 15:25:52,589 - cart.routes - INFO - Added new item to cart
+2025-06-11 15:25:52,591 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/cart/ - 0.0700s
+2025-06-11 15:26:05,353 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:26:05,356 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0028s
+2025-06-11 15:26:05,356 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:26:05,363 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/cart/ - 0.0073s
+2025-06-11 15:26:15,729 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:26:15,731 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0020s
+2025-06-11 15:26:15,735 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:26:15,744 - cart.routes - INFO - User admin@example.com fetching cart
+2025-06-11 15:26:15,785 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/cart/ - 0.0495s
+2025-06-11 15:26:44,985 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 15:26:45,006 - auth.routes - INFO - Signin attempt for email: user@example.com
+2025-06-11 15:26:45,834 - auth.routes - WARNING - Signin failed for email: user@example.com
+2025-06-11 15:26:45,840 - middlewares.logging_middleware - INFO - Response: 401 for POST http://localhost:8000/auth/signin - 0.8543s
+2025-06-11 15:29:25,019 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 15:29:25,028 - auth.routes - INFO - Signin attempt for email: user@example.com
+2025-06-11 15:29:26,010 - auth.routes - WARNING - Signin failed for email: user@example.com
+2025-06-11 15:29:26,010 - middlewares.logging_middleware - INFO - Response: 401 for POST http://localhost:8000/auth/signin - 0.9903s
+2025-06-11 15:30:21,727 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signup from 127.0.0.1
+2025-06-11 15:30:21,739 - auth.routes - INFO - Signup attempt for email: test@example.com
+2025-06-11 15:30:21,743 - auth.routes - WARNING - Signup failed - email already exists: test@example.com
+2025-06-11 15:30:21,744 - middlewares.logging_middleware - INFO - Response: 400 for POST http://localhost:8000/auth/signup - 0.0174s
+2025-06-11 15:31:00,437 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signup from 127.0.0.1
+2025-06-11 15:31:00,439 - auth.routes - INFO - Signup attempt for email: test1@example.com
+2025-06-11 15:31:00,837 - auth.routes - INFO - User created successfully: test1@example.com
+2025-06-11 15:31:00,837 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/signup - 0.3996s
+2025-06-11 15:31:43,631 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 15:31:43,632 - auth.routes - INFO - Signin attempt for email: test1@example.com
+2025-06-11 15:31:44,042 - auth.routes - INFO - Signin successful for email: test1@example.com
+2025-06-11 15:31:44,042 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/signin - 0.4113s
+2025-06-11 15:34:51,000 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000//cart/5 from 127.0.0.1
+2025-06-11 15:34:51,001 - middlewares.logging_middleware - INFO - Response: 404 for POST http://localhost:8000//cart/5 - 0.0010s
+2025-06-11 15:34:57,880 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart/5 from 127.0.0.1
+2025-06-11 15:34:57,899 - middlewares.logging_middleware - INFO - Response: 405 for POST http://localhost:8000/cart/5 - 0.0190s
+2025-06-11 15:35:04,767 - middlewares.logging_middleware - INFO - Request: PUT http://localhost:8000/cart/5 from 127.0.0.1
+2025-06-11 15:35:04,772 - cart.routes - INFO - User admin@example.com updating cart item 5
+2025-06-11 15:35:04,781 - middlewares.logging_middleware - INFO - Response: 404 for PUT http://localhost:8000/cart/5 - 0.0139s
+2025-06-11 15:35:09,659 - middlewares.logging_middleware - INFO - Request: PUT http://localhost:8000/cart/5 from 127.0.0.1
+2025-06-11 15:35:09,675 - cart.routes - INFO - User admin@example.com updating cart item 5
+2025-06-11 15:35:09,681 - middlewares.logging_middleware - INFO - Response: 404 for PUT http://localhost:8000/cart/5 - 0.0214s
+2025-06-11 15:35:17,003 - middlewares.logging_middleware - INFO - Request: PUT http://localhost:8000/cart/4 from 127.0.0.1
+2025-06-11 15:35:17,010 - cart.routes - INFO - User admin@example.com updating cart item 4
+2025-06-11 15:35:17,015 - middlewares.logging_middleware - INFO - Response: 404 for PUT http://localhost:8000/cart/4 - 0.0123s
+2025-06-11 15:36:07,822 - middlewares.logging_middleware - INFO - Request: PUT http://localhost:8000/cart/1 from 127.0.0.1
+2025-06-11 15:36:07,829 - cart.routes - INFO - User admin@example.com updating cart item 1
+2025-06-11 15:36:07,871 - cart.routes - INFO - Cart item quantity updated to 3
+2025-06-11 15:36:07,871 - middlewares.logging_middleware - INFO - Response: 200 for PUT http://localhost:8000/cart/1 - 0.0491s
+2025-06-11 15:37:35,065 - middlewares.logging_middleware - INFO - Request: DELETE http://localhost:8000/cart/1 from 127.0.0.1
+2025-06-11 15:37:35,068 - cart.routes - INFO - User admin@example.com removing product 1 from cart
+2025-06-11 15:37:35,083 - cart.routes - INFO - Product 1 removed from cart
+2025-06-11 15:37:35,085 - middlewares.logging_middleware - INFO - Response: 200 for DELETE http://localhost:8000/cart/1 - 0.0255s
+2025-06-11 15:40:15,529 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:40:15,537 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0081s
+2025-06-11 15:40:15,542 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:40:15,552 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/cart/ - 0.0103s
+2025-06-11 15:40:33,659 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:40:33,660 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0011s
+2025-06-11 15:40:33,663 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:40:33,668 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/cart/ - 0.0056s
+2025-06-11 15:40:54,787 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:40:54,796 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0084s
+2025-06-11 15:40:54,796 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:40:54,812 - cart.routes - INFO - User test1@example.com fetching cart
+2025-06-11 15:40:54,837 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/cart/ - 0.0412s
+2025-06-11 15:41:12,053 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:41:12,053 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/cart - 0.0000s
+2025-06-11 15:41:12,078 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:41:12,089 - cart.routes - INFO - User test1@example.com adding product 1 to cart
+2025-06-11 15:41:12,126 - cart.routes - INFO - Added new item to cart
+2025-06-11 15:41:12,128 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/cart/ - 0.0503s
+2025-06-11 15:41:19,075 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 15:41:19,075 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0000s
+2025-06-11 15:41:19,083 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 15:41:19,089 - cart.routes - INFO - User test1@example.com fetching cart
+2025-06-11 15:41:19,108 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/cart/ - 0.0249s
+2025-06-11 15:42:02,477 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/checkout from 127.0.0.1
+2025-06-11 15:42:02,478 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/checkout - 0.0004s
+2025-06-11 15:42:02,483 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/checkout/ from 127.0.0.1
+2025-06-11 15:42:02,487 - middlewares.logging_middleware - INFO - Response: 405 for GET http://localhost:8000/checkout/ - 0.0033s
+2025-06-11 15:42:59,705 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/checkout from 127.0.0.1
+2025-06-11 15:42:59,707 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/checkout - 0.0021s
+2025-06-11 15:42:59,707 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/checkout/ from 127.0.0.1
+2025-06-11 15:42:59,707 - middlewares.logging_middleware - INFO - Response: 405 for GET http://localhost:8000/checkout/ - 0.0000s
+2025-06-11 15:43:49,832 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/checkout from 127.0.0.1
+2025-06-11 15:43:49,841 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/checkout - 0.0098s
+2025-06-11 15:43:49,841 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/checkout/ from 127.0.0.1
+2025-06-11 15:43:49,859 - checkout.routes - INFO - User test1@example.com initiating checkout
+2025-06-11 15:43:49,945 - checkout.routes - INFO - Order 1 created successfully for user test1@example.com
+2025-06-11 15:43:49,945 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/checkout/ - 0.1038s
+2025-06-11 15:44:47,113 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 15:44:47,113 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0054s
+2025-06-11 15:44:47,113 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 15:44:47,125 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 15:44:47,164 - middlewares.logging_middleware - ERROR - Error processing request: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type - 0.0412s
+2025-06-11 15:44:47,170 - __main__ - ERROR - Global exception: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type
+2025-06-11 15:46:31,600 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 15:46:31,600 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0000s
+2025-06-11 15:46:31,600 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 15:46:31,654 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 15:46:31,665 - middlewares.logging_middleware - ERROR - Error processing request: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type - 0.0650s
+2025-06-11 15:46:31,667 - __main__ - ERROR - Global exception: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type
+2025-06-11 15:49:51,050 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/1 from 127.0.0.1
+2025-06-11 15:49:51,061 - orders.routes - INFO - User test1@example.com fetching order 1 details
+2025-06-11 15:49:51,084 - middlewares.logging_middleware - ERROR - Error processing request: 1 validation error for OrderDetailResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type - 0.0341s
+2025-06-11 15:49:51,088 - __main__ - ERROR - Global exception: 1 validation error for OrderDetailResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type
+2025-06-11 15:50:13,580 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 15:50:13,585 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/admin/products/1 - 0.0050s
+2025-06-11 15:50:36,925 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products?category=Electronics from 127.0.0.1
+2025-06-11 15:50:36,930 - products.routes - INFO - Fetching products with filters - category: Electronics, price: None-None
+2025-06-11 15:50:36,955 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products?category=Electronics - 0.0295s
+2025-06-11 15:50:57,977 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products/search?keyword=iphone from 127.0.0.1
+2025-06-11 15:50:57,977 - products.routes - INFO - Searching products with keyword: iphone
+2025-06-11 15:50:57,997 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products/search?keyword=iphone - 0.0194s
+2025-06-11 15:51:34,013 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 15:51:34,013 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0000s
+2025-06-11 15:51:34,018 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 15:51:34,023 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 15:51:34,027 - middlewares.logging_middleware - ERROR - Error processing request: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type - 0.0089s
+2025-06-11 15:51:34,029 - __main__ - ERROR - Global exception: 1 validation error for OrderResponse
+updated_at
+  Input should be a valid datetime [type=datetime_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.5/v/datetime_type
+2025-06-11 16:05:39,343 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 16:05:39,348 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0057s
+2025-06-11 16:05:39,353 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 16:05:39,410 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/orders/ - 0.0571s
+2025-06-11 16:06:04,274 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 16:06:04,277 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0030s
+2025-06-11 16:06:04,284 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 16:06:04,289 - middlewares.logging_middleware - INFO - Response: 401 for GET http://localhost:8000/orders/ - 0.0048s
+2025-06-11 16:06:12,257 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 16:06:12,288 - auth.routes - INFO - Signin attempt for email: test1@example.com
+2025-06-11 16:06:12,323 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\ritika\ecommerce-backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 16:06:13,412 - auth.routes - INFO - Signin successful for email: test1@example.com
+2025-06-11 16:06:13,427 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/signin - 1.1697s
+2025-06-11 16:06:30,032 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 16:06:30,038 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0062s
+2025-06-11 16:06:30,045 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 16:06:30,059 - cart.routes - INFO - User test1@example.com fetching cart
+2025-06-11 16:06:30,073 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/cart/ - 0.0285s
+2025-06-11 16:06:39,439 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart from 127.0.0.1
+2025-06-11 16:06:39,439 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/cart - 0.0000s
+2025-06-11 16:06:39,448 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 16:06:39,459 - cart.routes - INFO - User test1@example.com adding product 1 to cart
+2025-06-11 16:06:39,504 - cart.routes - INFO - Added new item to cart
+2025-06-11 16:06:39,505 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/cart/ - 0.0573s
+2025-06-11 16:06:45,872 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart from 127.0.0.1
+2025-06-11 16:06:45,874 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/cart - 0.0020s
+2025-06-11 16:06:45,877 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/cart/ from 127.0.0.1
+2025-06-11 16:06:45,888 - cart.routes - INFO - User test1@example.com fetching cart
+2025-06-11 16:06:45,896 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/cart/ - 0.0192s
+2025-06-11 16:06:59,753 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/checkout from 127.0.0.1
+2025-06-11 16:06:59,753 - middlewares.logging_middleware - INFO - Response: 307 for POST http://localhost:8000/checkout - 0.0027s
+2025-06-11 16:06:59,758 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/checkout/ from 127.0.0.1
+2025-06-11 16:06:59,767 - checkout.routes - INFO - User test1@example.com initiating checkout
+2025-06-11 16:06:59,823 - checkout.routes - INFO - Order 2 created successfully for user test1@example.com
+2025-06-11 16:06:59,823 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/checkout/ - 0.0648s
+2025-06-11 16:07:11,961 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 16:07:11,961 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0000s
+2025-06-11 16:07:11,970 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 16:07:11,978 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 16:07:11,984 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/orders/ - 0.0142s
+2025-06-11 16:07:23,766 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/1 from 127.0.0.1
+2025-06-11 16:07:23,766 - orders.routes - INFO - User test1@example.com fetching order 1 details
+2025-06-11 16:07:23,784 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/orders/1 - 0.0193s
+2025-06-11 16:10:43,193 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/1 from 127.0.0.1
+2025-06-11 16:10:43,247 - orders.routes - INFO - User test1@example.com fetching order 1 details
+2025-06-11 16:10:43,268 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/orders/1 - 0.0758s
+2025-06-11 16:10:52,888 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 16:10:52,888 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0020s
+2025-06-11 16:10:52,893 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 16:10:52,909 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 16:10:52,916 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/orders/ - 0.0223s
+2025-06-11 16:11:15,202 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 16:11:15,211 - utils.auth - WARNING - Non-admin user test1@example.com attempted admin action
+2025-06-11 16:11:15,213 - middlewares.logging_middleware - INFO - Response: 403 for GET http://localhost:8000/admin/products/1 - 0.0103s
+2025-06-11 16:11:24,391 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signin from 127.0.0.1
+2025-06-11 16:11:24,416 - auth.routes - INFO - Signin attempt for email: admin@example.com
+2025-06-11 16:11:24,425 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\ritika\ecommerce-backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-11 16:11:25,479 - auth.routes - INFO - Signin successful for email: admin@example.com
+2025-06-11 16:11:25,481 - middlewares.logging_middleware - INFO - Response: 200 for POST http://localhost:8000/auth/signin - 1.0892s
+2025-06-11 16:11:49,325 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 16:11:49,332 - products.routes - INFO - Admin admin@example.com fetching product 1
+2025-06-11 16:11:49,354 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/admin/products/1 - 0.0295s
+2025-06-11 16:15:17,917 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products/1 from 127.0.0.1
+2025-06-11 16:15:17,956 - products.routes - INFO - Admin admin@example.com fetching product 1
+2025-06-11 16:15:17,961 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/admin/products/1 - 0.0442s
+2025-06-11 16:17:15,773 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products from 127.0.0.1
+2025-06-11 16:17:15,779 - products.routes - INFO - Fetching products with filters - category: None, price: None-None
+2025-06-11 16:17:15,787 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products - 0.0144s
+2025-06-11 16:26:16,449 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/products from 127.0.0.1
+2025-06-11 16:26:16,459 - products.routes - INFO - Fetching products with filters - category: None, price: None-None
+2025-06-11 16:26:16,495 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/products - 0.0462s
+2025-06-11 16:26:22,935 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders from 127.0.0.1
+2025-06-11 16:26:22,935 - middlewares.logging_middleware - INFO - Response: 307 for GET http://localhost:8000/orders - 0.0000s
+2025-06-11 16:26:22,945 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/orders/ from 127.0.0.1
+2025-06-11 16:26:23,006 - orders.routes - INFO - User test1@example.com fetching order history
+2025-06-11 16:26:23,016 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/orders/ - 0.0715s
+2025-06-11 16:31:32,339 - middlewares.logging_middleware - INFO - Request: GET http://localhost:8000/admin/products from 127.0.0.1
+2025-06-11 16:31:32,585 - products.routes - INFO - Admin admin@example.com fetching products page 1
+2025-06-11 16:31:32,654 - middlewares.logging_middleware - INFO - Response: 200 for GET http://localhost:8000/admin/products - 0.3255s
+2025-06-21 01:16:49,785 - middlewares.logging_middleware - INFO - Request: POST http://localhost:8000/auth/signup from 127.0.0.1
+2025-06-21 01:16:49,796 - middlewares.logging_middleware - INFO - Response: 422 for POST http://localhost:8000/auth/signup - 0.0116s
