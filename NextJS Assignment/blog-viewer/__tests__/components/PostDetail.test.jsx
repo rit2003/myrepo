@@ -7,8 +7,8 @@ const mockPost = {
   title: "Test Blog Post",
   content: "This is a test content for the blog post.",
   excerpt: "This is a test excerpt",
-  author: "John Doe",
-  publishedAt: "2024-01-15",
+  author: "Jay Soni",
+  publishedAt: "2025-01-15",
 };
 
 const mockOnClose = jest.fn();
@@ -21,7 +21,7 @@ describe("PostDetail Component", () => {
   it("renders post details correctly", () => {
     render(<PostDetail post={mockPost} onClose={mockOnClose} />);
     expect(screen.getByText("Test Blog Post")).toBeInTheDocument();
-    expect(screen.getByText((content) => content.includes("John Doe"))).toBeInTheDocument();
+    expect(screen.getByText((content) => content.includes("Jay Soni"))).toBeInTheDocument();
     expect(screen.getByText("This is a test excerpt")).toBeInTheDocument();
   });
 
